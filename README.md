@@ -1,166 +1,265 @@
-import React, { useState } from "react";
+HealingHopeSite/
+│
+├── index.html
+├── about.html
+├── services.html
+├── booking.html
+├── testimonials.html
+├── prayer.html
+├── contact.html
+├── style.css
+├── README.txt
+└── /assets
+    ├── photo1.jpeg
+    ├── photo2.jpeg
+    ├── photo3.jpeg
+    ├── photo4.jpeg
+    └── favicon.png
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healing Hope Christian Counseling</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+</head>
+<body>
+<header class="hero">
+  <img src="assets/photo1.jpeg" class="hero-img" alt="Roshell Boudreaux">
+  <div class="hero-text">
+    <h1>Healing Hope Christian Counseling</h1>
+    <p class="tagline">Restoring Hearts, Renewing Faith, and Reviving Hope Through Christ</p>
+    <p class="verse">“Who can find a virtuous woman? for her price is far above rubies.” — Proverbs 31:10</p>
+    <a href="booking.html" class="btn">Book a Session</a>
+  </div>
+</header>
 
-export default function Site() {
-  const [open, setOpen] = useState(false);
+<section class="intro">
+  <h2>Welcome to Healing Hope</h2>
+  <p>At Healing Hope Christian Counseling, we believe in faith-based healing that restores the mind, heart, and spirit through the power of Christ. Whether you are seeking guidance, emotional support, or spiritual renewal, we are here to walk beside you.</p>
+</section>
 
-  const navItems = [
-    { id: "home", label: "Home" },
-    { id: "services", label: "Services" },
-    { id: "about", label: "About" },
-    { id: "resources", label: "Resources" },
-    { id: "contact", label: "Contact" },
-  ];
+<footer>
+  <p>© 2025 Healing Hope Christian Counseling | <a href="contact.html">Contact</a></p>
+</footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Healing Hope Christian Counseling</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header><h1>About Roshell Boudreaux</h1></header>
 
-  const scrollTo = (id) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-    setOpen(false);
-  };
+<section class="about">
+  <img src="assets/photo4.jpeg" alt="Roshell Boudreaux" class="about-img">
+  <div>
+    <h2>Meet Roshell</h2>
+    <p>Roshell Boudreaux is a <strong>Certified Counselor and Life Coach</strong>, and the <strong>Founder of BCB Apostolic Ministry</strong>. With a compassionate heart and a calling to serve, she established Healing Hope Christian Counseling to help individuals find restoration and renewal through faith.</p>
+    <p>Through prayer, biblical guidance, and spiritual empowerment, Roshell helps others overcome emotional pain, strengthen their faith, and walk confidently in purpose. She believes that healing begins when we surrender our hearts to Christ—where true peace and transformation are found.</p>
+  </div>
+</section>
 
-  return (
-    <div className="min-h-screen bg-white text-slate-800">
-      <header className="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-slate-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-2xl bg-violet-600 flex items-center justify-center text-white font-semibold shadow-sm">RB</div>
-              <div>
-                <p className="font-semibold leading-tight">Roshell Boudreaux</p>
-                <p className="text-xs text-slate-500 -mt-0.5">Christian Counseling & Coaching</p>
-              </div>
-            </div>
-            <nav className="hidden md:flex items-center gap-6">
-              {navItems.map((n) => (
-                <button
-                  key={n.id}
-                  onClick={() => scrollTo(n.id)}
-                  className="text-sm text-slate-700 hover:text-violet-700 transition-colors"
-                >
-                  {n.label}
-                </button>
-              ))}
-              <a
-                href="#booking"
-                className="inline-flex items-center gap-2 rounded-2xl bg-violet-600 px-4 py-2 text-white text-sm shadow-sm hover:bg-violet-700 transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollTo("booking");
-                }}
-              >
-                Book Session
-              </a>
-            </nav>
-            <button
-              className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-200 hover:bg-slate-50"
-              onClick={() => setOpen((v) => !v)}
-              aria-label="Open menu"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-700">
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <line x1="3" y1="18" x2="21" y2="18" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        {open && (
-          <div className="md:hidden border-t border-slate-200 bg-white">
-            <div className="max-w-6xl mx-auto px-4 py-4 grid gap-3">
-              {navItems.map((n) => (
-                <button
-                  key={n.id}
-                  onClick={() => scrollTo(n.id)}
-                  className="text-left text-sm px-3 py-2 rounded-xl hover:bg-slate-50"
-                >
-                  {n.label}
-                </button>
-              ))}
-              <button
-                onClick={() => scrollTo("booking")}
-                className="text-left text-sm px-3 py-2 rounded-xl bg-violet-600 text-white hover:bg-violet-700"
-              >
-                Book Session
-              </button>
-            </div>
-          </div>
-        )}
-      </header>
+<footer><p><a href="index.html">Home</a></p></footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - Healing Hope</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header><h1>Counseling Services</h1></header>
 
-      <section id="home" className="relative overflow-hidden">
-        <div className="absolute inset-x-0 -top-40 -z-10 blur-3xl opacity-30" aria-hidden="true">
-          <div className="mx-auto max-w-2xl rotate-6 bg-gradient-to-tr from-violet-300 via-fuchsia-200 to-rose-200 p-24 rounded-full" />
-        </div>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900">
-                Faith-forward counseling for real life.
-              </h1>
-              <p className="mt-5 text-slate-600 leading-relaxed">
-                Compassionate, scripture-aligned guidance for women and families. Together, we’ll build rhythms of healing, clarity, and hope.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href="#booking"
-                  onClick={(e) => { e.preventDefault(); scrollTo("booking"); }}
-                  className="rounded-2xl bg-violet-600 px-5 py-3 text-white text-sm font-medium shadow-sm hover:bg-violet-700"
-                >
-                  Book a Session
-                </a>
-                <a
-                  href="#services"
-                  onClick={(e) => { e.preventDefault(); scrollTo("services"); }}
-                  className="rounded-2xl border border-slate-300 px-5 py-3 text-slate-700 text-sm hover:bg-slate-50"
-                >
-                  Explore Services
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+<section class="services">
+  <ul>
+    <li><strong>Individual Counseling</strong> – Find clarity and healing through faith-centered one-on-one sessions.</li>
+    <li><strong>Marriage & Family Guidance</strong> – Strengthen relationships with biblical principles and open communication.</li>
+    <li><strong>Spiritual Coaching & Inner Healing</strong> – Reconnect with God’s plan and overcome emotional barriers.</li>
+    <li><strong>Virtual Sessions</strong> – Online meetings available for convenience and privacy.</li>
+  </ul>
+</section>
 
-      <section id="services" className="py-20 bg-slate-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl font-semibold mb-6">Services</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {["Individual Counseling","Marriage & Family Support","Women’s Coaching","Workshops & Retreats","Virtual Sessions","Prayer & Care"].map((title, i) => (
-              <div key={i} className="rounded-3xl bg-white p-6 shadow-sm border border-slate-200">
-                <h3 className="font-semibold text-lg">{title}</h3>
-                <p className="mt-2 text-sm text-slate-600">Faith-centered support to help you grow, heal, and walk confidently in your purpose.</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+<footer><p><a href="index.html">Home</a></p></footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking & Calendar - Healing Hope</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header><h1>Booking & Calendar</h1></header>
 
-      <section id="about" className="py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl font-semibold mb-4">About Roshell</h2>
-          <p className="text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            I’m Roshell Boudreaux—creative, devoted to serving others, and passionate about spiritual wellness. As a counselor and coach, I blend biblical wisdom with practical tools to help you grow in grace, integrity, and purpose.
-          </p>
-        </div>
-      </section>
+<section class="calendar">
+  <iframe src="https://calendar.google.com/calendar/embed?src=bcbapostolicministry%40gmail.com&ctz=America%2FChicago"
+    style="border:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  <p>Need a specific time? <a href="#">Book a Session</a></p>
+</section>
 
-      <section id="booking" className="py-20 bg-slate-50 text-center">
-        <h2 className="text-3xl font-semibold mb-4">Ready to begin?</h2>
-        <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
-          Book a discovery call to see if we’re a fit. Sessions available online and in person.
-        </p>
-        <a
-          href="https://calendly.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-block rounded-2xl bg-violet-600 px-6 py-3 text-white text-sm font-medium shadow-sm hover:bg-violet-700"
-        >
-          Schedule on Calendly
-        </a>
-      </section>
-
-      <footer className="border-t border-slate-200 py-10 text-center text-sm text-slate-500">
-        <p>© {new Date().getFullYear()} Roshell Boudreaux. All rights reserved.</p>
-      </footer>
-    </div>
-  );
+<footer><p><a href="index.html">Home</a></p></footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Testimonials - Healing Hope</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><h1>Testimonials</h1></header>
+<section class="testimonials">
+  <p>"Roshell helped me find peace and confidence through faith."</p>
+  <p>"Her sessions brought healing to my heart and my family."</p>
+  <p>Share your story with us at <a href="contact.html">Contact</a>.</p>
+</section>
+<footer><p><a href="index.html">Home</a></p></footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Testimonials - Healing Hope</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><h1>Testimonials</h1></header>
+<section class="testimonials">
+  <p>"Roshell helped me find peace and confidence through faith."</p>
+  <p>"Her sessions brought healing to my heart and my family."</p>
+  <p>Share your story with us at <a href="contact.html">Contact</a>.</p>
+</section>
+<footer><p><a href="index.html">Home</a></p></footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Testimonials - Healing Hope</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><h1>Testimonials</h1></header>
+<section class="testimonials">
+  <p>"Roshell helped me find peace and confidence through faith."</p>
+  <p>"Her sessions brought healing to my heart and my family."</p>
+  <p>Share your story with us at <a href="contact.html">Contact</a>.</p>
+</section>
+<footer><p><a href="index.html">Home</a></p></footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Prayer Requests - Healing Hope</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><h1>Submit a Prayer Request</h1></header>
+<form action="mailto:bcbapostolicministry@gmail.com" method="post" enctype="text/plain" class="prayer-form">
+  <label>Your Name:</label><input type="text" name="Name" required>
+  <label>Your Email:</label><input type="email" name="Email" required>
+  <label>Your Prayer Request:</label><textarea name="Request" rows="6" required></textarea>
+  <button type="submit">Send Request</button>
+</form>
+<footer><p><a href="index.html">Home</a></p></footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Prayer Requests - Healing Hope</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><h1>Submit a Prayer Request</h1></header>
+<form action="mailto:bcbapostolicministry@gmail.com" method="post" enctype="text/plain" class="prayer-form">
+  <label>Your Name:</label><input type="text" name="Name" required>
+  <label>Your Email:</label><input type="email" name="Email" required>
+  <label>Your Prayer Request:</label><textarea name="Request" rows="6" required></textarea>
+  <button type="submit">Send Request</button>
+</form>
+<footer><p><a href="index.html">Home</a></p></footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Contact & Payments - Healing Hope</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><h1>Contact & Payments</h1></header>
+<section class="contact">
+  <p>Email: <a href="mailto:bcbapostolicministry@gmail.com">bcbapostolicministry@gmail.com</a></p>
+  <p>Cash App: $RoshellBoudreaux</p>
+  <p>Zelle & Apple Pay accepted</p>
+</section>
+<footer><p><a href="index.html">Home</a></p></footer>
+</body>
+</html>body {
+  font-family: Garamond, serif;
+  background-color: #f9f8f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
+
+header, footer {
+  background-color: #e6d9ee;
+  color: #3b2a4a;
+  padding: 1rem;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.hero-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(75, 50, 90, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.btn {
+  background-color: #b58fd4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+section {
+  padding: 2rem;
+}
+
+.about-img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+footer a {
+  color: #3b2a4a;
+  text-decoration: none;
+}Healing Hope Christian Counseling Website
+------------------------------------------
+To publish:
+1. Visit https://app.netlify.com/drop
+2. Drag and drop the HealingHopeSite folder (or your HealingHopeSite.zip file)
+3. Netlify will host it and give you a live link instantly.
+
+To edit:
+- Open any .html file in a text editor.
+- Replace text or images in the /assets folder.
+- Save and re-upload if needed.
+
+Contact: bcbapostolicministry@gmail.com
+Cash App: $RoshellBoudreaux
+
