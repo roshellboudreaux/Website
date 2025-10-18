@@ -1,0 +1,158 @@
+HealingHopeSite/
+│
+├── index.html
+├── about.html
+├── services.html
+├── booking.html
+├── testimonials.html
+├── prayer.html
+├── contact.html
+├── style.css
+├── README.txt
+└── /assets
+    ├── photo1.jpeg
+    ├── photo2.jpeg
+    ├── photo3.jpeg
+    ├── photo4.jpeg
+    └── favicon.png
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healing Hope Christian Counseling</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+</head>
+<body>
+<header class="hero">
+  <img src="assets/photo1.jpeg" class="hero-img" alt="Roshell Boudreaux">
+  <div class="hero-text">
+    <h1>Healing Hope Christian Counseling</h1>
+    <p class="tagline">Restoring Hearts, Renewing Faith, and Reviving Hope Through Christ</p>
+    <p class="verse">“Who can find a virtuous woman? for her price is far above rubies.” — Proverbs 31:10</p>
+    <a href="booking.html" class="btn">Book a Session</a>
+  </div>
+</header>
+
+<section class="intro">
+  <h2>Welcome to Healing Hope</h2>
+  <p>At Healing Hope Christian Counseling, we believe in faith-based healing that restores the mind, heart, and spirit through the power of Christ. Whether you are seeking guidance, emotional support, or spiritual renewal, we are here to walk beside you.</p>
+</section>
+
+<footer>
+  <p>© 2025 Healing Hope Christian Counseling | <a href="contact.html">Contact</a></p>
+</footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Healing Hope Christian Counseling</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header><h1>About Roshell Boudreaux</h1></header>
+
+<section class="about">
+  <img src="assets/photo4.jpeg" alt="Roshell Boudreaux" class="about-img">
+  <div>
+    <h2>Meet Roshell</h2>
+    <p>Roshell Boudreaux is a <strong>Certified Counselor and Life Coach</strong>, and the <strong>Founder of BCB Apostolic Ministry</strong>. With a compassionate heart and a calling to serve, she established Healing Hope Christian Counseling to help individuals find restoration and renewal through faith.</p>
+    <p>Through prayer, biblical guidance, and spiritual empowerment, Roshell helps others overcome emotional pain, strengthen their faith, and walk confidently in purpose. She believes that healing begins when we surrender our hearts to Christ—where true peace and transformation are found.</p>
+  </div>
+</section>
+
+<footer><p><a href="index.html">Home</a></p></footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - Healing Hope</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header><h1>Counseling Services</h1></header>
+
+<section class="services">
+  <ul>
+    <li><strong>Individual Counseling</strong> – Find clarity and healing through faith-centered one-on-one sessions.</li>
+    <li><strong>Marriage & Family Guidance</strong> – Strengthen relationships with biblical principles and open communication.</li>
+    <li><strong>Spiritual Coaching & Inner Healing</strong> – Reconnect with God’s plan and overcome emotional barriers.</li>
+    <li><strong>Virtual Sessions</strong> – Online meetings available for convenience and privacy.</li>
+  </ul>
+</section>
+
+<footer><p><a href="index.html">Home</a></p></footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking & Calendar - Healing Hope</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header><h1>Booking & Calendar</h1></header>
+
+<section class="calendar">
+  <iframe src="https://calendar.google.com/calendar/embed?src=bcbapostolicministry%40gmail.com&ctz=America%2FChicago"
+    style="border:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  <p>Need a specific time? <a href="#">Book a Session</a></p>
+</section>
+
+<footer><p><a href="index.html">Home</a></p></footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Testimonials - Healing Hope</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><h1>Testimonials</h1></header>
+<section class="testimonials">
+  <p>"Roshell helped me find peace and confidence through faith."</p>
+  <p>"Her sessions brought healing to my heart and my family."</p>
+  <p>Share your story with us at <a href="contact.html">Contact</a>.</p>
+</section>
+<footer><p><a href="index.html">Home</a></p></footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Testimonials - Healing Hope</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><h1>Testimonials</h1></header>
+<section class="testimonials">
+  <p>"Roshell helped me find peace and confidence through faith."</p>
+  <p>"Her sessions brought healing to my heart and my family."</p>
+  <p>Share your story with us at <a href="contact.html">Contact</a>.</p>
+</section>
+<footer><p><a href="index.html">Home</a></p></footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Testimonials - Healing Hope</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><h1>Testimonials</h1></header>
+<section class="testimonials">
+  <p>"Roshell helped me find peace and confidence through faith."</p>
+  <p>"Her sessions brought healing to my heart and my family."</p>
+  <p>Share your story with us at <a href="contact.html">Contact</a>.</p>
+</section>
+<footer><p><a href="index.html">Home</a></p></footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Prayer Requests - Healing Hope</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><h1>Submit a Prayer Request</h1></header>
+<form action="mailto:bcbapostolicministry@gmail.com" method="post" enctype="text/plain" class="prayer-form">
+  <label>Yo
